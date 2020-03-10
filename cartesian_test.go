@@ -14,7 +14,7 @@ type setValTestCase struct {
 
 var cartesian = make(CartesianImpl)
 
-var setValTests = []setValTestCase{
+var dataCartesian = []setValTestCase{
 	{
 		inputData: Coordinates{x: 0, y: 2},
 		expected:  13,
@@ -46,7 +46,7 @@ var setValTests = []setValTestCase{
 }
 
 func TestCartesianImpl(t *testing.T) {
-	for _, data := range setValTests {
+	for _, data := range dataCartesian {
 		val := data.expected
 		t.Run("SetVal", func(t *testing.T) {
 			res, err := cartesian.SetVal(data.inputData, val)
