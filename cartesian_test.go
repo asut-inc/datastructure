@@ -12,7 +12,7 @@ type setValTestCase struct {
 	expected  int
 }
 
-var cartesian = new(CartesianImpl)
+var cartesian = make(CartesianImpl)
 
 var setValTests = []setValTestCase{
 	{
